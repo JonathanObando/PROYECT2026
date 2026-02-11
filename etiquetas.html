@@ -1,36 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETIQUETAS</title>
+    <title>Etiquetas HTML</title>
     <link rel="icon" type="image/x-icon" href="microchip_11644769.png">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            border-bottom: 2px solid #00c6ff;
+            padding-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .etiqueta {
+            background-color: #00c6ff;
+            color: black;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* BOTONES INTERACTIVOS */
+        .btn-etiqueta {
+            width: 100%;
+            background-color: #00c6ff;
+            border: none;
+            padding: 12px;
+            margin: 8px 0;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        .btn-etiqueta:hover {
+            background-color: #0096c7;
+            transform: scale(1.02);
+        }
+
+        .contenido {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: rgba(0, 0, 0, 0.4);
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
-    <P>Etiquetas de visual studio code:</P>
-    <p>¿Qué es una etiqueta HTML?</p>
-       <h1> Antes de entrar en materia, conviene explicar de que vamos a hablar. Las etiquetas HTML son pequeños bloques de
-        código, que indican al navegador como debe interpretar el contenido recogido entre dichas etiquetas. Por
-        ejemplo, si queremos «pintar» un párrafo de texto, hay una etiqueta específica para que el navegador interprete
-        ese texto como un párrafo. Estas etiquetas cuentan además con atributos que podemos añadir y que, en sí, pueden
-        determinar como será el comportamiento específico que tendrá la etiqueta. Te dejo por aquí un listado de
-        atributos HTML para complementar esta entrada, y si quieres empezar por algo más sencillo, te dejamos otro
-        artículo para que puedas usar las etiquetas básicas de HTML en importaciones de productos.
 
-        Las etiquetas HTML comienzan siempre con el símbolo «<» y finalizan con el símbolo «>». Entre medias de estos
-            dos símbolos irá el nombre de la etiqueta que queremos que el navegador interprete.
+    <header>
+        <h1>ETIQUETAS HTML</h1>
+        <p>“Me acordé de lo que quizás sea la regla fundamental del progreso tecnológico: si algo se puede hacer, probablemente se hará, y posiblemente ya se haya hecho”.
+        </p> -Edward Snowden- 
 
-            Todas las etiquetas HTML están compuestas por una etiqueta de apertura, y una etiqueta de cierre. Aunque hay
-            excepciones, como por ejemplo la etiqueta para cargar una imagen que son llamadas etiquetas huérfanas, ya
-            que solo tienen etiqueta de apertura.
+        </p>
+    </header>
 
-            Las etiquetas de cierre se construyen con una barra «/» justo antes de la propia etiqueta y los símbolos «<»
-                y «>». Resumiendo, si queremos «pintar» un párrafo en la página web, abriremos con la etiqueta de
-                apertura de párrafo "<p>", y cerraríamos con la etiqueta de cierre "</p>".</h1>
-   
-    <table></table>
+    <div class="contenedor">
+        <h2>¿Qué es una etiqueta HTML?</h2>
+
+        <p>
+            Las etiquetas HTML son bloques de código que indican al navegador cómo debe mostrar el contenido de una página web.
+        </p>
+
+        <p>
+            Siempre comienzan con el símbolo <span class="etiqueta">&lt;</span> y terminan con
+            <span class="etiqueta">&gt;</span>. Entre estos símbolos va el nombre de la etiqueta.
+        </p>
+
+        <p>
+            La mayoría tienen una etiqueta de apertura y una de cierre.
+            Por ejemplo:
+            <span class="etiqueta">&lt;p&gt;</span>
+            y
+            <span class="etiqueta">&lt;/p&gt;</span>
+        </p>
+
+        <p>
+            Estas etiquetas permiten estructurar títulos, párrafos, imágenes, tablas y mucho más dentro de una página web.
+        </p>
+    </div>
+
+    <div class="contenedor">
+
+        <h2>Estructura básica</h2>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;!DOCTYPE&gt;</button>
+        <div class="contenido">Define el tipo y versión del documento HTML.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;html&gt;</button>
+        <div class="contenido">Elemento raíz que contiene todo el documento.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;head&gt;</button>
+        <div class="contenido">Contiene metadatos y configuraciones.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;title&gt;</button>
+        <div class="contenido">Define el título de la pestaña del navegador.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;meta&gt;</button>
+        <div class="contenido">Define información adicional del documento.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;body&gt;</button>
+        <div class="contenido">Contiene el contenido visible de la página.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;style&gt;</button>
+        <div class="contenido">Etiquetas usadas para introducir código CSS en línea, es decir, en el propio documento HTML.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;link&gt;</button>
+        <div class="contenido">Se usa para enlazar recursos externos al documento HTML. El ejemplo más común son las hojas de estilos CSS..</div>
+
+        <h2>Texto y contenido</h2>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;h1&gt; - &lt;h6&gt;</button>
+        <div class="contenido">Encabezados de distintos niveles de importancia.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;p&gt;</button>
+        <div class="contenido">Define un párrafo.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;br&gt;</button>
+        <div class="contenido">Inserta un salto de línea.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;hr&gt;</button>
+        <div class="contenido">Crea una línea divisoria horizontal.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;strong&gt;</button>
+        <div class="contenido">Texto importante (negrita semántica).</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;em&gt;</button>
+        <div class="contenido">Texto enfatizado (cursiva).</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;mark&gt;</button>
+        <div class="contenido">Resalta texto.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;small&gt;</button>
+        <div class="contenido">Texto más pequeño.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;del&gt;</button>
+        <div class="contenido">Texto eliminado o tachado.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;ins&gt;</button>
+        <div class="contenido">Texto insertado o subrayado.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;nav&gt;</button>
+        <div class="contenido">Usadas para definir el contenido que será la sección de navegación de la web.</div>
+        
+       <button class="btn-etiqueta" onclick="toggle(this)">&lt;pre&gt;</button>
+        <div class="contenido">Usada para pegar texto manteniendo el pre formato propio del texto.</div>
+
+
+    </div>
+
+    <footer>
+        Página creada por Jonathan Obando | 2026
+    </footer>
+
+    <script>
+        function toggle(boton) {
+            let contenido = boton.nextElementSibling;
+            contenido.style.display = contenido.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
 </body>
 
 </html>
