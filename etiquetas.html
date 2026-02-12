@@ -30,14 +30,14 @@
         .contenedor {
             max-width: 900px;
             margin: 40px auto;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(4, 220, 144, 0.158);
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
 
         h2 {
-            border-bottom: 2px solid #00c6ff;
+            border-bottom: 2px solid #0cbef0;
             padding-bottom: 10px;
         }
 
@@ -55,9 +55,10 @@
         }
 
         /* BOTONES INTERACTIVOS */
+        
         .btn-etiqueta {
             width: 100%;
-            background-color: #00c6ff;
+            background-color: #23a9b8a2;
             border: none;
             padding: 12px;
             margin: 8px 0;
@@ -69,13 +70,13 @@
         }
 
         .btn-etiqueta:hover {
-            background-color: #0096c7;
+            background-color: #06e10e00;
             transform: scale(1.02);
         }
-
+       /*fondo de boton de etiqueta*/
         .contenido {
             display: none;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(170, 157, 157, 0.09);
             padding: 10px 15px;
             border-radius: 8px;
             margin-bottom: 10px;
@@ -95,13 +96,14 @@
 
     <header>
         <h1>ETIQUETAS HTML</h1>
-        <p>“Me acordé de lo que quizás sea la regla fundamental del progreso tecnológico: si algo se puede hacer, probablemente se hará, y posiblemente ya se haya hecho”.
-        </p> -Edward Snowden- 
-
-        </p>
+        <blockquote>“Me acordé de lo que quizás sea la regla fundamental del progreso tecnológico: si algo se puede hacer, probablemente se hará, y posiblemente ya se haya hecho”.
+         -Edward Snowden- 
+</blockquote>
+        
     </header>
 
     <div class="contenedor">
+         <!--DEFINICION DE ETIQUETAS HTML -->
         <h2>¿Qué es una etiqueta HTML?</h2>
 
         <p>
@@ -127,7 +129,7 @@
     </div>
 
     <div class="contenedor">
-
+        <!--LISTADO DE ETIQUETAS-->
         <h2>Estructura básica</h2>
 
         <button class="btn-etiqueta" onclick="toggle(this)">&lt;!DOCTYPE&gt;</button>
@@ -191,15 +193,50 @@
         
        <button class="btn-etiqueta" onclick="toggle(this)">&lt;pre&gt;</button>
         <div class="contenido">Usada para pegar texto manteniendo el pre formato propio del texto.</div>
+    
+       <button class="btn-etiqueta" onclick="toggle(this)">&lt;blockquote&gt;</button>
+        <div class="contenido">Se usan para indicar que el contenido es texto citado.</div> 
 
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;ol&gt;</button>
+        <div class="contenido">Etiquetas para crear una lista ordenada.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;ul&gt;</button>
+        <div class="contenido">Etiquetas para crear una lista desordenada.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;li&gt;</button>
+        <div class="contenido">Etiquetas que recogen el contenido de un elemento de una lista, sea ordenada o no.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;dl&gt;</button>
+        <div class="contenido">Usada para crear una lista de definiciones.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;dt&gt;</button>
+        <div class="contenido"> Representa un término definido por la siguiente etiqueta&lt;dd&gt; </dd>.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;dd&gt;</button>
+        <div class="contenido">Se usa para definir los términos listados antes que él.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;figure&gt;</button>
+        <div class="contenido">Indica una figura ilustrada como parte del documento HTML5.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;figcaption&gt;</button>
+        <div class="contenido"> Utilizada para definir la leyenda de una figura.</div>
+
+        <button class="btn-etiqueta" onclick="toggle(this)">&lt;div&gt;</button>
+        <div class="contenido">Etiqueta común utilizada para crear un contenedor genérico.</div>
+
+        <!--<button class="btn-etiqueta" onclick="toggle(this)">&lt;&gt;</button>
+        <div class="contenido">.</div>-->
+        
+        
 
     </div>
-
+    <!--PIE DE PAGINA-->
     <footer>
         Página creada por Jonathan Obando | 2026
     </footer>
-
+    <!--FUNCION PARA MOSTRAR DEFINICION DE ETIQUETA -->
     <script>
+       
         function toggle(boton) {
             let contenido = boton.nextElementSibling;
             contenido.style.display = contenido.style.display === "block" ? "none" : "block";
