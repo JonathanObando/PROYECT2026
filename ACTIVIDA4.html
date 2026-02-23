@@ -7,44 +7,11 @@
     <link rel="icon" type="image/x-icon" href="microchip_11644769.png">
 
     <style>
-.titulo-actividad{
-    .titulo-actividad{
-    text-align: center;
-    margin-top: 50px;
-}
-
-.titulo-actividad h1{
-    font-size: 40px;
-    margin-bottom: 5px;
-}
-
-.titulo-actividad h2{
-    font-size: 22px;
-    font-weight: normal;
-    color: #cccccc;
-}
-}
-
-.titulo-actividad h1{
-    font-size: 40px;
-    margin-bottom: 5px;
-}
-
-.titulo-actividad h2{
-    font-size: 22px;
-    font-weight: normal;
-    color: #cccccc;
-}
-
-        body {
-            
+         body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: white;
-
-
-    
 }
 
 header {
@@ -134,62 +101,76 @@ footer {
     margin-top: 50px;
     background: rgba(0, 0, 0, 0.5);
 }
-        
     </style>
 </head>
 
 <body>
-    
-</div>
 
     <header>
-        <h1>Simulación de Compuertas Lógicas</h1>
+        <h1>SENSOR DE DISTANCIA</h1>
     </header>
 
     <div class="contenedor">
         <h2>Objetivos</h2>
+        
+        
         <p>
-            Analizar el funcionamiento de las compuertas lógicas básicas mediante simulación en Tinkercad,
-            comprendiendo su comportamiento y aplicación en circuitos digitales.
+        Crear y poner en marcha un sistema electrónico que, por medio de un sensor ultrasónico, pueda calcular distancias y emitir una señal visual o acústica según la cercanía del objeto detectado.
         </p>
-
+        
         <h2>Descripción de la Actividad</h2>
+         
         <p>
-            Se realizó la simulación de diferentes compuertas lógicas utilizando un circuito integrado 74HC08,
-            switches DIP y LEDs para visualizar las salidas según las combinaciones de entrada.
+            El presente proyecto consiste en el desarrollo de un sistema de medición de distancia utilizando un sensor ultrasónico conectado a una placa Arduino UNO.
+
+El sensor ultrasónico funciona enviando una onda sonora de alta frecuencia (ultrasonido). Cuando esta onda choca contra un objeto, rebota y regresa al sensor. El Arduino mide el tiempo que tarda en regresar la señal y, mediante una fórmula matemática basada en la velocidad del sonido, calcula la distancia en centímetros.
+
+        </p>El sistema trabaja bajo la siguiente lógica:<p></p>
+  
+
+• Si la distancia medida es mayor a 100 cm<br>
+
+• Se enciende un LED como indicador de que el objeto se encuentra lejos<br>
+
+
+
+• Si la distancia es menor o igual a 100 cm<br>
+
+
+• Se activa un buzzer como señal de alerta indicando proximidad.<br>
+
+<p>Este tipo de sistema puede aplicarse en:</p>
+
+• Sistemas de alarma<br>
+
+• Sensores de estacionamiento.<br>
+
+• Automatización industrial.<br>
+
+• Control de nivel o proximidad en robótica.
+            
         </p>
 
         <h2>Materiales</h2>
         <p>
             • Protoboard<br>
-            • 74HC04<br>
-            • 74HC08<br>
-            • 74HC32<br>
             • LEDs<br>
             • Resistencias<br>
-            • Fuente de 3V<br>
-            • Switch DIP
+            • Arduino<br>
+            • Buzzer<br>
         </p>
-        <img src="Diapositiva29.JPG"> 
-        <img src="Diapositiva56.JPG"> 
-        <img src="Diapositiva336.JPG">     
+
+        <img src="distancia.JPG" width="700" height="400">
 
         <h2>Conclusiones</h2>
         <p>
-            La simulación permitió comprender cómo funcionan las compuertas AND y cómo las combinaciones
-            de entradas determinan el estado de salida del circuito.
+        El proyecto permitió comprender y aplicar el funcionamiento del sensor ultrasónico como herramienta para la medición de distancias utilizando la plataforma Arduino. Se logró desarrollar un sistema capaz de detectar la proximidad de un objeto y responder de manera automática mediante señales visuales (LED) y sonoras (buzzer), cumpliendo con los objetivos planteados.
         </p>
 
-        
-
-        <a class="btn-link" href="https://www.tinkercad.com/things/bWNCIjQDt57-surprising-jarv-jofo" target="_blank">
-            Simulacion compuertas Tinkercad
-        </a>
-
-       
+       <a class="btn-link" href="https://www.tinkercad.com/things/guhl5S6S3ZD-sensor-distancia" target="_blank">
+            Presiona para iniciar
 
          
-
         </a>
     </div>
 

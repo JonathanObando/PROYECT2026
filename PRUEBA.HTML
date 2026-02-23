@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actividad - Conversor de Sistemas Numéricos</title>
+
+<style>
+    img{
+    display:block;
+    margin:40px auto;
+    max-width:100%;
+    height:auto;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color:white;
+}
+
+header{
+    text-align:center;
+    padding:40px;
+    background: rgba(0,0,0,0.5);
+}
+
+.contenedor{
+    max-width:900px;
+    margin:40px auto;
+    padding:30px;
+    background: rgba(255,255,255,0.08);
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+h2{
+    border-left:5px solid #00ff99;
+    padding-left:15px;
+    margin-top:40px;
+}
+
+p{
+    line-height:1.8;
+    font-size:18px;
+}
+
+code{
+    background:#111;
+    padding:5px 8px;
+    border-radius:5px;
+    color:#00ff99;
+}
+
+pre{
+    background:#111;
+    padding:15px;
+    border-radius:10px;
+    overflow:auto;
+    color:#00ff99;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    background:rgba(0,0,0,0.5);
+    
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>CONVERSOR DE SISTEMAS NUMÉRICOS</h1>
+</header>
+
+<div class="contenedor">
+
+<h2>Objetivos</h2>
+<p>
+• Desarrollar un sistema que permita convertir números entre diferentes bases numéricas.<br>
+• Aplicar conocimientos de JavaScript y manipulación del DOM.<br>
+• Comprender el funcionamiento de los sistemas Binario, Decimal, Octal y Hexadecimal.
+</p>
+
+<h2>Descripción de la Actividad</h2>
+<p>
+Se desarrolló una página web interactiva que permite ingresar un número en una base específica
+y convertirlo automáticamente a las demás bases numéricas.
+El sistema valida que el número sea correcto antes de realizar la conversión.
+Además, se implementó un fondo animado tipo efecto "Matrix" utilizando canvas.
+</p>
+
+<h2>Materiales Utilizados</h2>
+<p>
+• HTML5<br>
+• CSS3<br>
+• JavaScript<br>
+• Canvas API
+</p>
+
+<h2>Desarrollo del Código Paso a Paso</h2>
+
+<h3>1️⃣ Capturar datos del usuario</h3>
+<p>
+Se obtiene la base seleccionada y el número ingresado usando <code>getElementById()</code>.
+</p>
+
+<pre>
+let base = parseInt(document.getElementById("baseOrigen").value);
+let numero = document.getElementById("numero").value;
+</pre>
+
+<p>
+• <b>parseInt()</b> convierte el valor a número entero.<br>
+• Se almacena el número ingresado en una variable.
+</p>
+
+---
+
+<h3>2️⃣ Convertir el número a decimal</h3>
+
+<pre>
+let decimal = parseInt(numero, base);
+</pre>
+
+<p>
+Se usa <code>parseInt(numero, base)</code> para transformar el número ingresado a base decimal.
+</p>
+
+---
+
+<h3>3️⃣ Validar errores.</h3>
+
+<pre>
+if (isNaN(decimal)) {
+    resultadoDiv.innerHTML = "ERROR.";
+    return;
+}
+</pre>
+
+<p>
+• <b>isNaN()</b> verifica si el resultado no es un número válido.<br>
+• Si hay error, se muestra "ERROR".
+</p>
+
+---
+
+<h3>4️⃣ Convertir a otras bases</h3>
+
+<pre>
+Decimal: ${decimal}
+Binario: ${decimal.toString(2)}
+Octal: ${decimal.toString(8)}
+Hexadecimal: ${decimal.toString(16).toUpperCase()}
+</pre>
+
+<p>
+• <b>toString(2)</b> convierte a binario.<br>
+• <b>toString(8)</b> convierte a octal.<br>
+• <b>toString(16)</b> convierte a hexadecimal.
+</p>
+
+---
+
+<h3>5️⃣ Función Nueva Conversión</h3>
+
+<pre>
+function nuevaConversion(){
+    document.getElementById("numero").value = "";
+    document.getElementById("resultado").innerHTML = "";
+}
+</pre>
+
+<p>
+Permite limpiar el formulario y comenzar una nueva conversión.
+</p>
+
+---
+
+<h3>6️⃣ Fondo Animado tipo Matrix</h3>
+
+<p>
+Se utiliza un elemento <code>&lt;canvas&gt;</code> para dibujar números binarios en movimiento.
+</p>
+
+<pre>
+const letras = "01";
+const fontSize = 18;
+const columnas = canvas.width / fontSize;
+</pre>
+
+<p>
+Se generan columnas de números que caen verticalmente simulando el efecto digital.
+</p>
+<img src="87.JPG" width="700" height="400">
+
+---
+
+<h2>Conclusiones</h2>
+<p>
+El proyecto permitió aplicar conceptos de programación web,
+manipulación del DOM y conversión de sistemas numéricos.
+Además, se integraron efectos visuales avanzados utilizando canvas,
+lo que mejora la experiencia del usuario y el diseño profesional del sistema.
+</p>
+
+
+
+</div>
+
+<footer>
+Página creada por Jonathan Obando | 2026
+</footer>
+
+</body>
+</html>
+
+
+
+
+
