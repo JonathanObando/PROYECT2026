@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversor de sistemas numericos</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;  
+        box-sizing:border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body{
+        background: black;
+        overflow:hidden;
+        color:white;
+    }
+
+    canvas{
+        position:fixed;
+        top:0;
+        left:0;
+        z-index:-1;
+    }
+
+    .container{
+        position:relative;
+        width:400px;
+        margin:120px auto;
+        padding:30px;
+        background: rgba(0,0,0,0.75);
+        border-radius:15px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 25px rgba(0,255,0,0.4);
+        text-align:center;
+    }
+
+    h2{
+        margin-bottom:20px;
+        color:#00ff99;
+    }
+
+    select, input, button{
+        width:100%;
+        padding:10px;
+        margin:10px 0;
+        border:none;
+        border-radius:8px;
+        font-size:16px;
+    }
+
+    select, input{
+        background:#111;
+        color:#00ff99;
+        border:1px solid #00ff99;
+    }
+
+    button{
+        background:#00ff99;
+        color:black;
+        font-weight:bold;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    button:hover{
+        background:#3d7c62;
+        transform:scale(1.05);
+    }
+
+    #resultado{
+        margin-top:15px;
+        font-weight:bold;
+        line-height:1.6;
+    }
+    footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: #000;
+    color: #ccc;
+    font-size: 14px;
+}
+#btnNuevo{
+    background:#00ff99;
+    color:black;
+    border:1px solid #717673;
+}
+
+#btnNuevo:hover{
+    background:#bcc2bf;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div class="container">
+    <h2>Conversor de Sistemas Numéricos</h2>
+
+    <select id="baseOrigen">
+
+        <option value="2">Binario</option>
+        <option value="10">Decimal</option>
+        <option value="8">Octal</option>
+        <option value="16">Hexadecimal</option>
+    </select>
+
+    <input type="text" id="numero" placeholder="Ingrese el número">
+    
+    <button onclick="convertir()">Convertir</button>
+    <button onclick="nuevaConversion()" id="btnNuevo">Nueva Conversión</button>
+
+    <div id="resultado"></div>
+</div>
+
+
+
+<script>
+    
+    
+
+// CONVERSOR
+
+function convertir() {
+    let base = parseInt(document.getElementById("baseOrigen").value);
+    let numero = document.getElementById("numero").value;
+    let resultadoDiv = document.getElementById("resultado");
+
+    let decimal = parseInt(numero, base);
+
+    if (isNaN(decimal)) {
+        resultadoDiv.innerHTML = "ERROR.";
+        return;
+    }
+
+    resultadoDiv.innerHTML = `
+        Decimal: ${decimal}<br>
+        Binario: ${decimal.toString(2)}<br>
+        Octal: ${decimal.toString(8)}<br>
+        Hexadecimal: ${decimal.toString(16).toUpperCase()}
+    `;
+}
+function nuevaConversion(){
+    document.getElementById("numero").value = "";
+    document.getElementById("resultado").innerHTML = "";
+    document.getElementById("baseOrigen").selectedIndex = 0;
+    document.getElementById("numero").focus();
+}
+
+
+
+// FONDO VERDE
+
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const letras = "01";
+const fontSize = 18;
+const columnas = canvas.width / fontSize;
+
+const drops = [];
+for(let x = 0; x < columnas; x++){
+    drops[x] = 1;
+}
+
+function dibujar(){
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00ff99";
+    ctx.font = fontSize + "px monospace";
+
+    for(let i = 0; i < drops.length; i++){
+        const texto = letras.charAt(Math.floor(Math.random()*letras.length));
+        ctx.fillText(texto, i*fontSize, drops[i]*fontSize);
+
+        if(drops[i]*fontSize > canvas.height && Math.random() > 0.975){
+            drops[i] = 0;
+        }
+
+        drops[i]++;
+    }
+}
+
+setInterval(dibujar, 44);
+
+// Ajuste responsivo
+window.addEventListener("resize", ()=>{
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+});
+</script>
+
+<footer>
+    BY JONATHAN OBANDO
+</footer
+
+</body>
+</html>
