@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas HTML</title>
+    <link rel="icon" type="image/x-icon" href="microchip_11644769.png">
+
+    <style>
+        .tabla-etiquetas{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-etiquetas th{
+    background-color: #00c6ff;
+    color: black;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.tabla-etiquetas td{
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.tabla-etiquetas tr:nth-child(even){
+    background-color: rgba(255,255,255,0.05);
+}
+
+.tabla-etiquetas tr:hover{
+    background-color: rgba(0,198,255,0.2);
+}
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+/*fondo  de pagina*/
+        .contenedor {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: rgba(125, 144, 158, 0.158);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            border-bottom: 2px solid #0cbef0;
+            padding-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .etiqueta {
+            background-color: #00c6ff;
+            color: black;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* BOTONES INTERACTIVOS */
+        
+        .btn-etiqueta {
+            width: 100%;
+            background-color: #23a9b8a2;
+            border: none;
+            padding: 12px;
+            margin: 8px 0;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        .btn-etiqueta:hover {
+            background-color: #06e10e00;
+            transform: scale(1.02);
+        }
+       /*fondo de boton de etiqueta*/
+        .contenido {
+            display: none;
+            background-color: rgba(170, 157, 157, 0.09);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: rgba(0, 0, 0, 0.4);
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>ETIQUETAS HTML</h1>
+        <blockquote>“Me acordé de lo que quizás sea la regla fundamental del progreso tecnológico: si algo se puede hacer, probablemente se hará, y posiblemente ya se haya hecho”.
+         -Edward Snowden- 
+</blockquote>
+        
+    </header>
+
+    <div class="contenedor">
+         <!--DEFINICION DE ETIQUETAS HTML -->
+        <h2>¿Qué es una etiqueta HTML?</h2>
+
+        <p>
+            Las etiquetas HTML son bloques de código que indican al navegador cómo debe mostrar el contenido de una página web.
+        </p>
+
+        <p>
+            Siempre comienzan con el símbolo <span class="etiqueta">&lt;</span> y terminan con
+            <span class="etiqueta">&gt;</span>. Entre estos símbolos va el nombre de la etiqueta.
+        </p>
+
+        <p>
+            La mayoría tienen una etiqueta de apertura y una de cierre.
+            Por ejemplo:
+            <span class="etiqueta">&lt;p&gt;</span>
+            y
+            <span class="etiqueta">&lt;/p&gt;</span>
+        </p>
+
+        <p>
+            Estas etiquetas permiten estructurar títulos, párrafos, imágenes, tablas y mucho más dentro de una página web.
+        </p>
+    </div>
+
+    <div class="contenedor">
+        <!--LISTADO DE ETIQUETAS-->
+        <h2>ETIQUETAS HTML</h2>
+
+<table class="tabla-etiquetas">
+<tr>
+<th>NOMBRE</th>
+<th>DEFINICIÓN</th>
+<th>EJEMPLO</th>
+</tr>
+
+<tr><td>&lt;!DOCTYPE&gt;</td><td>Define el tipo de documento</td><td>&lt;!DOCTYPE html&gt;</td></tr>
+<tr><td>&lt;html&gt;</td><td>Elemento raíz</td><td>&lt;html&gt;&lt;/html&gt;</td></tr>
+<tr><td>&lt;head&gt;</td><td>Metadatos</td><td>&lt;head&gt;&lt;/head&gt;</td></tr>
+<tr><td>&lt;title&gt;</td><td>Título de pestaña</td><td>&lt;title&gt;Mi web&lt;/title&gt;</td></tr>
+<tr><td>&lt;meta&gt;</td><td>Información adicional</td><td>&lt;meta charset="UTF-8"&gt;</td></tr>
+<tr><td>&lt;link&gt;</td><td>Enlace externo</td><td>&lt;link rel="stylesheet"&gt;</td></tr>
+<tr><td>&lt;style&gt;</td><td>CSS interno</td><td>&lt;style&gt;...&lt;/style&gt;</td></tr>
+<tr><td>&lt;body&gt;</td><td>Contenido visible</td><td>&lt;body&gt;&lt;/body&gt;</td></tr>
+
+<tr><td>&lt;h1&gt; - &lt;h6&gt;</td><td>Encabezados</td><td>&lt;h1&gt;Título&lt;/h1&gt;</td></tr>
+<tr><td>&lt;p&gt;</td><td>Párrafo</td><td>&lt;p&gt;Texto&lt;/p&gt;</td></tr>
+<tr><td>&lt;br&gt;</td><td>Salto de línea</td><td>&lt;br&gt;</td></tr>
+<tr><td>&lt;hr&gt;</td><td>Línea horizontal</td><td>&lt;hr&gt;</td></tr>
+<tr><td>&lt;strong&gt;</td><td>Texto importante</td><td>&lt;strong&gt;Hola&lt;/strong&gt;</td></tr>
+<tr><td>&lt;em&gt;</td><td>Cursiva</td><td>&lt;em&gt;Hola&lt;/em&gt;</td></tr>
+<tr><td>&lt;mark&gt;</td><td>Resaltado</td><td>&lt;mark&gt;Hola&lt;/mark&gt;</td></tr>
+<tr><td>&lt;small&gt;</td><td>Texto pequeño</td><td>&lt;small&gt;Hola&lt;/small&gt;</td></tr>
+
+<tr><td>&lt;a&gt;</td><td>Enlace</td><td>&lt;a href="#"&gt;Link&lt;/a&gt;</td></tr>
+<tr><td>&lt;img&gt;</td><td>Imagen</td><td>&lt;img src="img.jpg"&gt;</td></tr>
+<tr><td>&lt;video&gt;</td><td>Video</td><td>&lt;video controls&gt;&lt;/video&gt;</td></tr>
+<tr><td>&lt;audio&gt;</td><td>Audio</td><td>&lt;audio controls&gt;&lt;/audio&gt;</td></tr>
+
+<tr><td>&lt;ul&gt;</td><td>Lista desordenada</td><td>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</td></tr>
+<tr><td>&lt;ol&gt;</td><td>Lista ordenada</td><td>&lt;ol&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ol&gt;</td></tr>
+<tr><td>&lt;li&gt;</td><td>Elemento lista</td><td>&lt;li&gt;Item&lt;/li&gt;</td></tr>
+
+<tr><td>&lt;table&gt;</td><td>Tabla</td><td>&lt;table&gt;&lt;/table&gt;</td></tr>
+<tr><td>&lt;tr&gt;</td><td>Fila tabla</td><td>&lt;tr&gt;&lt;/tr&gt;</td></tr>
+<tr><td>&lt;td&gt;</td><td>Celda</td><td>&lt;td&gt;Dato&lt;/td&gt;</td></tr>
+<tr><td>&lt;th&gt;</td><td>Encabezado tabla</td><td>&lt;th&gt;Dato&lt;/th&gt;</td></tr>
+
+<tr><td>&lt;form&gt;</td><td>Formulario</td><td>&lt;form&gt;&lt;/form&gt;</td></tr>
+<tr><td>&lt;input&gt;</td><td>Campo entrada</td><td>&lt;input type="text"&gt;</td></tr>
+<tr><td>&lt;button&gt;</td><td>Botón</td><td>&lt;button&gt;Enviar&lt;/button&gt;</td></tr>
+<tr><td>&lt;label&gt;</td><td>Etiqueta formulario</td><td>&lt;label&gt;Nombre&lt;/label&gt;</td></tr>
+
+<tr><td>&lt;div&gt;</td><td>Contenedor</td><td>&lt;div&gt;&lt;/div&gt;</td></tr>
+<tr><td>&lt;span&gt;</td><td>Contenedor en línea</td><td>&lt;span&gt;Texto&lt;/span&gt;</td></tr>
+<tr><td>&lt;header&gt;</td><td>Encabezado sección</td><td>&lt;header&gt;&lt;/header&gt;</td></tr>
+<tr><td>&lt;footer&gt;</td><td>Pie de página</td><td>&lt;footer&gt;&lt;/footer&gt;</td></tr>
+<tr><td>&lt;section&gt;</td><td>Sección</td><td>&lt;section&gt;&lt;/section&gt;</td></tr>
+<tr><td>&lt;article&gt;</td><td>Artículo</td><td>&lt;article&gt;&lt;/article&gt;</td></tr>
+<tr><td>&lt;nav&gt;</td><td>Navegación</td><td>&lt;nav&gt;&lt;/nav&gt;</td></tr>
+
+</table>
+<h2>PROPIEDADES CSS</h2>
+
+<table class="tabla-etiquetas">
+<tr>
+<th>PROPIEDAD</th>
+<th>FUNCIÓN</th>
+<th>EJEMPLO</th>
+</tr>
+
+<tr><td>color</td><td>Color texto</td><td>color: red;</td></tr>
+<tr><td>background</td><td>Fondo</td><td>background: blue;</td></tr>
+<tr><td>margin</td><td>Espacio exterior</td><td>margin: 20px;</td></tr>
+<tr><td>padding</td><td>Espacio interior</td><td>padding: 10px;</td></tr>
+<tr><td>border</td><td>Borde</td><td>border: 1px solid black;</td></tr>
+<tr><td>font-size</td><td>Tamaño texto</td><td>font-size: 20px;</td></tr>
+<tr><td>text-align</td><td>Alineación</td><td>text-align: center;</td></tr>
+<tr><td>display</td><td>Tipo visualización</td><td>display: flex;</td></tr>
+<tr><td>position</td><td>Posición</td><td>position: relative;</td></tr>
+<tr><td>width</td><td>Ancho</td><td>width: 100%;</td></tr>
+<tr><td>height</td><td>Alto</td><td>height: 200px;</td></tr>
+<tr><td>flex-direction</td><td>Dirección flex</td><td>flex-direction: column;</td></tr>
+<tr><td>justify-content</td><td>Alineación horizontal</td><td>justify-content: center;</td></tr>
+<tr><td>align-items</td><td>Alineación vertical</td><td>align-items: center;</td></tr>
+
+</table>
+        <!--<button class="btn-etiqueta" onclick="toggle(this)">&lt;&gt;</button>
+        <div class="contenido">.</div>-->
+        
+        
+
+    </div>
+    <!--PIE DE PAGINA-->
+    <footer>
+        Página creada por Jonathan Obando | 2026
+    </footer>
+    <!--FUNCION PARA MOSTRAR DEFINICION DE ETIQUETA -->
+    <script>
+       
+        function toggle(boton) {
+            let contenido = boton.nextElementSibling;
+            contenido.style.display = contenido.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
+</body>
+
+</html>

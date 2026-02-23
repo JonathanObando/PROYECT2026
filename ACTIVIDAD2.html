@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+    <link rel="icon" type="image/x-icon" href="microchip_11644769.png">
+
+    <style>
+        
+        body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 45px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.contenedor {
+    max-width: 950px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.contenedor:hover {
+    transform: scale(1.01);
+}
+
+h2 {
+    border-left: 5px solid #00f2fe;
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* IMAGEN DE PRACTICA */
+.contenedor img {
+    display: block;
+    margin: 40px auto;
+    width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+    animation: fade 6s infinite;
+}
+
+.contenedor img:hover {
+    transform: scale(1.05);
+}
+
+/* ANIMACION */
+@keyframes fade {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+/* Botón moderno */
+.btn-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 25px;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.4s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.btn-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Leds con bucle</h1>
+    </header>
+
+    <div class="contenedor">
+        <h2>Objetivos</h2>
+        <p>
+        Desarollar esta actividad , realizando un bucle for o while para que los led se enciendan de manera ascendente y descendente.
+        </p>
+
+        <h2>Descripción de la Actividad</h2>
+        <p>
+            Se realizó la simulación en tinkercad utilizando 8 leds , la misma se utiliza un bucle para que el encendido sea automatico ,adicional se utiliza tiempo de encendido y de apagado de cada led ,de manera ascendente y descendente.
+        </p>
+
+        <h2>Materiales</h2>
+        <p>
+            • Protoboard<br>
+            • LEDs<br>
+            • Resistencias<br>
+            • Arduino<br>
+            
+        </p>
+
+        <img src="Presentación12.jpg"  width="700" height="400" >
+
+        <h2>Conclusiones</h2>
+        <p>
+            La simulación permitió comprender cómo funciona el bucle for y lo rapido que puede ser optimizar el codigo.    
+        </p>
+
+        <a class="btn-link" href="https://www.tinkercad.com/things/eCxHeMDrYdW-tremendous-rottis" target="_blank">
+            Presiona para iniciar 
+        </a>
+
+         
+        </a>
+    </div>
+
+    <footer>
+        Página creada por Jonathan Obando | 2026
+    </footer>
+
+</body>
+</html>

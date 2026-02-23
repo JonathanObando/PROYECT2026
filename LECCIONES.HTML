@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrónica</title>
+    <link rel="icon" type="image/x-icon" href="microchip_11644769.png">
+
+    <style>
+      
+      body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    background: linear-gradient(
+        270deg,
+        #2a2ee4,
+        #455d82,
+        #8b602f,
+        #131b01,
+        #9a5510,
+        #3b47b7
+    );
+    background-size: 600% 600%;
+    animation: movimientoElectronico 18s ease infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+
+    font-family: Arial, Verdana, sans-serif;
+    color: rgb(244, 241, 241);
+    text-align: center;
+}
+
+/* Animación */
+@keyframes movimientoElectronico {
+    0% { background-position: 0% 70%; }
+    50% { background-position: 100% 60%; }
+    100% { background-position: 0% 70%; }
+}
+
+.contenedor {
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 800px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+/* MENÚ  */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(144, 128, 208, 0.6);
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    /*COLOR DE BOTON AL PRESIONAR*/
+    background-color: #507860;
+    transform: scale(1.05);
+}
+
+.menu a.activo {
+    background-color: #724fa0;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="contenedor">
+        
+
+        <p><em>“Siempre es el momento apropiado para hacer lo que es correcto.”</em></p>
+        <p>-- Martin Luther King --</p>
+
+        <h2>SELECCIONA EL TEMA </h2>
+
+        <nav class="menu">
+    
+<a href="etiquetas.html">  ETIQUETAS HTML</a>
+  <a href="ACTIVIDAD5.HTML"> SISTEMA DE CONTRASEÑAS</a>
+    
+    
+    
+    
+</nav>
+    </div>
+    <!--PIE DE PAGINA-->
+     <footer>
+        
+        by Jonathan Obando
+        
+    </footer>
+ 
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

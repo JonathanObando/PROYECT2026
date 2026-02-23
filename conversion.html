@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas HTML</title>
+    <link rel="icon" type="image/x-icon" href="microchip_11644769.png">
+
+    <style>
+        img{
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+        .tabla-etiquetas{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .tabla-etiquetas th{
+            background-color: #00c6ff;
+            color: black;
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        .tabla-etiquetas td{
+            padding: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+
+        .tabla-etiquetas tr:nth-child(even){
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .tabla-etiquetas tr:hover{
+            background-color: rgba(0,198,255,0.2);
+        }
+
+        .explicacion{
+            background-color: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: rgba(125, 144, 158, 0.158);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            border-bottom: 2px solid #0cbef0;
+            padding-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: rgba(0, 0, 0, 0.4);
+            font-size: 14px;
+        }
+        .video{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.video iframe{
+    max-width: 100%;
+    height: 480px;
+}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CONVERSIÓN ENTRE BASES</h1>
+    <blockquote>
+        “Me acordé de lo que quizás sea la regla fundamental del progreso tecnológico:
+        si algo se puede hacer, probablemente se hará, y posiblemente ya se haya hecho”.
+        -Edward Snowden-
+    </blockquote>
+</header>
+
+<div class="contenedor">
+
+    <h2>Sistemas de Representación de la Información</h2>
+    <p>
+        En informática, utilizamos diferentes sistemas numéricos para representar información.
+        Cada sistema tiene su propia base y símbolos únicos.
+    </p>
+
+    <h2>Sistema Binario</h2>
+    <p>Utiliza solo 0 y 1. Su base es 2 y es el sistema que usan las computadoras.</p>
+
+    <h2>Sistema Octal</h2>
+    <p>Utiliza los números del 0 al 7. Su base es 8 y cada dígito equivale a 3 bits.</p>
+<img src="BIOC.JPG" width="700" height="500">
+    <h2>Sistema Hexadecimal</h2>
+    <p>Utiliza los números del 0 al 9 y las letras A-F. Su base es 16 y cada dígito equivale a 4 bits.</p>
+<img src="EX.JPG" width="800" height="700">
+    <h2>Tabla General de Conversiones</h2>
+
+    <table class="tabla-etiquetas">
+        <tr>
+            <th>Sistema Base</th>
+            <th>Ejemplo</th>
+            <th>Binario</th>
+            <th>Octal</th>
+            <th>Decimal</th>
+            <th>Hexadecimal</th>
+        </tr>
+        <tr>
+            <td>Binario</td>
+            <td>1101010110₂</td>
+            <td>1101010110₂</td>
+            <td>1526₈</td>
+            <td>854₁₀</td>
+            <td>356₁₆</td>
+        </tr>
+        <tr>
+            <td>Octal</td>
+            <td>35₈</td>
+            <td>011101₂</td>
+            <td>35₈</td>
+            <td>29₁₀</td>
+            <td>1D₁₆</td>
+        </tr>
+        <tr>
+            <td>Hexadecimal</td>
+            <td>1A₁₆</td>
+            <td>00011010₂</td>
+            <td>32₈</td>
+            <td>26₁₀</td>
+            <td>1A₁₆</td>
+        </tr>
+        <tr>
+            <td>Decimal</td>
+            <td>50₁₀</td>
+            <td>110010₂</td>
+            <td>62₈</td>
+            <td>50₁₀</td>
+            <td>32₁₆</td>
+        </tr>
+    </table>
+
+    <h2>Explicación de Cada Conversión</h2>
+
+    <div class="explicacion">
+        <strong>Binario a Decimal:</strong>
+        Se multiplica cada dígito por su potencia de 2 correspondiente y se suman los resultados.
+    </div>
+
+    <div class="explicacion">
+        <strong>Binario a Octal:</strong>
+        Se agrupan los bits en grupos de 3 desde la derecha y cada grupo se convierte a base 8.
+    </div>
+
+    <div class="explicacion">
+        <strong>Binario a Hexadecimal:</strong>
+        Se agrupan los bits en grupos de 4 desde la derecha y se convierten a base 16.
+    </div>
+
+    <div class="explicacion">
+        <strong>Octal a Decimal:</strong>
+        Se multiplica cada dígito por su potencia de 8 correspondiente y se suman los resultados.
+    </div>
+
+    <div class="explicacion">
+        <strong>Hexadecimal a Decimal:</strong>
+        Se multiplica cada dígito por su potencia de 16 correspondiente, convirtiendo letras A-F en valores 10-15.
+    </div>
+
+    <div class="explicacion">
+        <strong>Decimal a Binario / Octal / Hexadecimal:</strong>
+        Se realizan divisiones sucesivas entre la base correspondiente (2, 8 o 16) y se leen los residuos de abajo hacia arriba.
+    </div>
+<h2>Ejercicios de Conversión</h2>
+
+<table class="tabla-etiquetas">
+    <tr>
+        <th>EJERCICIO</th>
+        <th>BINARIO</th>
+        <th>DECIMAL</th>
+        <th>OCTAL</th>
+        <th>HEXADECIMAL</th>
+    </tr>
+
+    <tr><td>1</td><td>100111</td><td>39</td><td>47</td><td>27</td></tr>
+    <tr><td>2</td><td>010101</td><td>21</td><td>25</td><td>15</td></tr>
+    <tr><td>3</td><td>011101</td><td>29</td><td>35</td><td>1D</td></tr>
+    <tr><td>4</td><td>010111</td><td>23</td><td>27</td><td>17</td></tr>
+    <tr><td>5</td><td>101110</td><td>46</td><td>56</td><td>2E</td></tr>
+    <tr><td>6</td><td>100101</td><td>37</td><td>45</td><td>25</td></tr>
+    <tr><td>7</td><td>111000101</td><td>453</td><td>705</td><td>1C5</td></tr>
+    <tr><td>8</td><td>111000</td><td>56</td><td>70</td><td>38</td></tr>
+    <tr><td>9</td><td>10100010</td><td>162</td><td>242</td><td>A2</td></tr>
+    <tr><td>10</td><td>101010111100</td><td>2748</td><td>5274</td><td>ABC</td></tr>
+    <tr><td>11</td><td>00011111</td><td>31</td><td>037</td><td>1F</td></tr>
+    <tr><td>12</td><td>111110101100</td><td>4012</td><td>7654</td><td>FAC</td></tr>
+    <tr><td>13</td><td>0010101100</td><td>700</td><td>1274</td><td>AC</td></tr>
+    <tr><td>14</td><td>111110100</td><td>500</td><td>764</td><td>1F4</td></tr>
+    <tr><td>15</td><td>001001011000</td><td>600</td><td>1130</td><td>258</td></tr>
+    <tr><td>16</td><td>011001000</td><td>200</td><td>310</td><td>C8</td></tr>
+    <tr><td>17</td><td>010101111</td><td>175</td><td>257</td><td>AF</td></tr>
+    <tr><td>18</td><td>0110111</td><td>55</td><td>67</td><td>37</td></tr>
+    <tr><td>19</td><td>111101</td><td>61</td><td>75</td><td>3D</td></tr>
+    <tr><td>20</td><td>101101111</td><td>367</td><td>557</td><td>16F</td></tr>
+
+</table>
+
+
+<footer>
+    Página creada por Jonathan Obando | 2026
+</footer>
+
+</body>
+</html>

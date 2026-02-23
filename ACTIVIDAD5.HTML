@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5</title>
+    <link rel="icon" type="image/x-icon" href="microchip_11644769.png">
+
+    <style>
+         body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 45px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.contenedor {
+    max-width: 950px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.contenedor:hover {
+    transform: scale(1.01);
+}
+
+h2 {
+    border-left: 5px solid #00f2fe;
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* IMAGEN DE PRACTICA */
+.contenedor img {
+    display: block;
+    margin: 40px auto;
+    width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+    animation: fade 6s infinite;
+}
+
+.contenedor img:hover {
+    transform: scale(1.05);
+}
+
+/* ANIMACION */
+@keyframes fade {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+/* Botón moderno */
+.btn-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 25px;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.4s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.btn-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>GESTOR DE CONSTRASEÑAS</h1>
+       
+        
+    </header>
+
+    <div class="contenedor">
+        <h2>Objetivos</h2>
+         Establecer un password(contraseña)para el ingreso.
+         <p>Utilizar los condicionales aprendidos en clase.</p>
+
+        <p>
+          
+        </p>
+        
+        <h2>Descripción de la Actividad</h2>
+         
+        <p>
+         Mediante los condicionales que se han aprendido en clase , se desarolla un codigo donde se establece una contraseña ,al momento de ingresarla ,se debe mostrar en pantalla ("CORRECTO") ,esto indica que el acceso esta autorizado, caso contrario se mostrara en pantalla ("INCORRECTO", y a su vez una alarma sonara indicando que el acceso no esta autorizado.   
+        </p>
+
+        <h2>Materiales</h2>
+        <p>
+            • Protoboard<br>
+            • Piezo<br>
+            • Resistencias<br>
+            • Arduino<br>
+            • LCD 16X2<br>
+             • Teclado 4x4<br>
+        </p>
+
+        <img src="Diapositiva1.JPG" width="700" height="400">
+        <img src="Diapositiva2.JPG" width="700" height="400">
+        <img src="Diapositiva3.JPG" width="700" height="400">
+
+        <h2>Conclusiones</h2>
+        <p>
+            La simulacion nos permitio demostar como funciona un sistema gestor de constraseñas y asi entender como son los sistemas de cajeros automaticos .
+        </p>
+
+       <a class="btn-link" href="https://www.tinkercad.com/things/4P3nSptqvRx-gestor-contrasenas" target="_blank">
+            Presiona para iniciar
+
+         
+        </a>
+    </div>
+
+    <footer>
+        Página creada por Jonathan Obando | 2026
+    </footer>
+
+</body>
+</html>
