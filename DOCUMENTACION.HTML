@@ -6,7 +6,7 @@
 <title>Actividad - Conversor de Sistemas Numéricos</title>
 
 <style>
-    img{
+img{
     display:block;
     margin:40px auto;
     max-width:100%;
@@ -14,6 +14,7 @@
     border-radius:15px;
     box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
+
 body{
     margin:0;
     font-family:'Segoe UI', sans-serif;
@@ -67,14 +68,8 @@ footer{
     padding:20px;
     margin-top:40px;
     background:rgba(0,0,0,0.5);
-    
 }
 
-
-.btn-simulacion:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-}
 .btn-simulacion{
     background: linear-gradient(45deg,#00ff99,#00ccff);
     border:none;
@@ -85,6 +80,7 @@ footer{
     cursor:pointer;
     color:#111;
     transition: all 0.3s ease;
+    margin:10px 0;
     box-shadow:0 5px 15px rgba(0,0,0,0.4);
 }
 
@@ -92,15 +88,33 @@ footer{
     transform: scale(1.1);
     box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
+
+#codigoCompleto{
+    display:none;
+    margin-top:20px;
+}
 </style>
 
+<script>
+function toggleCodigo() {
+    const codigo = document.getElementById("codigoCompleto");
+    const boton = document.getElementById("btnVerCodigo");
+    if(codigo.style.display === "none") {
+        codigo.style.display = "block";
+        boton.innerText = "❌ Ocultar Código";
+    } else {
+        codigo.style.display = "none";
+        boton.innerText = "📄 Ver Código";
+    }
+}
+</script>
 
 </head>
 
 <body>
 
 <header>
-    <h1>CONVERSOR DE SISTEMAS NUMÉRICOS</h1>
+    <h1>DOCUMENTACION</h1>
 </header>
 
 <div class="contenedor">
@@ -129,6 +143,7 @@ Además, se implementó un fondo animado tipo efecto "Matrix" utilizando canvas.
 </p>
 
 <h2>Desarrollo del Código Paso a Paso</h2>
+
 
 <h3>1️⃣ Capturar datos del usuario</h3>
 <p>
@@ -219,24 +234,113 @@ const fontSize = 18;
 const columnas = canvas.width / fontSize;
 </pre>
 
+<h3>6️⃣ Fondo Animado tipo Matrix</h3>
+
+<p>
+Se utiliza un elemento <code>&lt;canvas&gt;</code> para dibujar números binarios en movimiento.
+</p>
+
+<pre>
+const letras = "01";
+const fontSize = 18;
+const columnas = canvas.width / fontSize;
+</pre>
 
 <p>
 Se generan columnas de números que caen verticalmente simulando el efecto digital.
 </p>
-<img src="87.JPG" width="700" height="400">
-<div style="text-align:center; margin-top:30px;">
-    <a href="https://jonathanobando.github.io/conversor-ex-de-oc-bi/" 
-       target="_blank" 
-       class="btn-simulacion">
-       🚀 Ver Simulación
-    </a>
-</div>
-   
-    </a>
-</div>
-</div>
 
----
+<img src="87.JPG" width="700" height="400">
+
+<!-- BOTÓN PARA VER CÓDIGO -->
+<div style="text-align:center; margin-top:20px;">
+    <button id="btnVerCodigo" class="btn-simulacion" onclick="toggleCodigo()">
+        📄 Ver Código
+    </button>
+
+    <div id="codigoCompleto">
+        <pre>
+&lt;!-- HTML y JS completo del conversor --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Conversor de Sistemas Numéricos&lt;/title&gt;
+&lt;style&gt;
+body { font-family: 'Segoe UI', sans-serif; background:black; color:white; }
+canvas { position:fixed; top:0; left:0; z-index:-1; }
+.container { width:400px; margin:120px auto; padding:30px; background: rgba(0,0,0,0.75); border-radius:15px; text-align:center; }
+input, select, button { width:100%; padding:10px; margin:10px 0; border-radius:8px; }
+#resultado { margin-top:15px; font-weight:bold; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;canvas id="matrix"&gt;&lt;/canvas&gt;
+
+&lt;div class="container"&gt;
+&lt;h2&gt;Conversor de Sistemas Numéricos&lt;/h2&gt;
+&lt;select id="baseOrigen"&gt;
+&lt;option value="2"&gt;Binario&lt;/option&gt;
+&lt;option value="10"&gt;Decimal&lt;/option&gt;
+&lt;option value="8"&gt;Octal&lt;/option&gt;
+&lt;option value="16"&gt;Hexadecimal&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;input type="text" id="numero" placeholder="Ingrese el número"&gt;
+&lt;button onclick="convertir()"&gt;Convertir&lt;/button&gt;
+&lt;button onclick="nuevaConversion()"&gt;Nueva Conversión&lt;/button&gt;
+
+&lt;div id="resultado"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+function convertir() {
+    let base = parseInt(document.getElementById("baseOrigen").value);
+    let numero = document.getElementById("numero").value;
+    let resultadoDiv = document.getElementById("resultado");
+    let decimal = parseInt(numero, base);
+    if(isNaN(decimal)) { resultadoDiv.innerHTML = "ERROR."; return; }
+    resultadoDiv.innerHTML = `Decimal: ${decimal}&lt;br&gt;Binario: ${decimal.toString(2)}&lt;br&gt;Octal: ${decimal.toString(8)}&lt;br&gt;Hexadecimal: ${decimal.toString(16).toUpperCase()}`;
+}
+
+function nuevaConversion() {
+    document.getElementById("numero").value = "";
+    document.getElementById("resultado").innerHTML = "";
+    document.getElementById("baseOrigen").selectedIndex = 0;
+    document.getElementById("numero").focus();
+}
+
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+const letras = "01";
+const fontSize = 18;
+const columnas = canvas.width / fontSize;
+const drops = [];
+for(let x=0;x&lt;columnas;x++){ drops[x]=1; }
+function dibujar() {
+    ctx.fillStyle = "rgba(0,0,0,0.05)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle = "#00ff99";
+    ctx.font = fontSize+"px monospace";
+    for(let i=0;i&lt;drops.length;i++){
+        const texto = letras.charAt(Math.floor(Math.random()*letras.length));
+        ctx.fillText(texto, i*fontSize, drops[i]*fontSize);
+        if(drops[i]*fontSize&gt;canvas.height &amp;&amp; Math.random()>0.975){ drops[i]=0; }
+        drops[i]++;
+    }
+}
+setInterval(dibujar,44);
+window.addEventListener("resize",()=>{ canvas.height=window.innerHeight; canvas.width=window.innerWidth; });
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </div>
+</div>
 
 <h2>Conclusiones</h2>
 <p>
@@ -246,8 +350,6 @@ Además, se integraron efectos visuales avanzados utilizando canvas,
 lo que mejora la experiencia del usuario y el diseño profesional del sistema.
 </p>
 
-
-
 </div>
 
 <footer>
@@ -256,8 +358,3 @@ Página creada por Jonathan Obando | 2026
 
 </body>
 </html>
-
-
-
-
-
